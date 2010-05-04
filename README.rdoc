@@ -14,6 +14,8 @@ script/plugin install git://github.com/linkrjr/breadcrumbs
 
 === Controllers setup
 
+Controllers are setup by calling the "breadcrumbs" class method
+
 ==== Simple sample
 
 Call the "breadcrumbs" method inside your controllers and pass it a block	
@@ -30,10 +32,10 @@ The method "add" above will be available from the block parameter.
 
 Add method:	
 	
-:text => The text to be display in the breadcrumbs
-:url='' => The url to link to, not mandatory so no link will be created
-:options={} => The same list of options that can be passed to a before_filter, view http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000526 for more details
-:&block => A block can be used to add dynamic parameters to a url, see example below
+ :text => The text to be display in the breadcrumbs
+ :url='' => The url to link to, not mandatory so no link will be created
+ :options={} => The same list of options that can be passed to a before_filter, view http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000526 for more details
+ :&block => A block can be used to add dynamic parameters to a url, see example below
 	
 ==== Dynamic urls	
 
