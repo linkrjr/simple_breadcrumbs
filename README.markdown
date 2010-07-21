@@ -31,15 +31,12 @@ Call the "breadcrumbs" method inside your controllers and pass it a block
 
 The method "add" above will be available from the block parameter.
 
-Add method:	
+Add method parameters:	
 	
-__text__ => The text to be display in the breadcrumbs
-
-__url=''__ => The url to link to, not mandatory so no link will be created
-
-__options={}__ => The same list of options that can be passed to a before_filter, [click here](http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000526) for more details
-
-__&block__ => A block can be used to add dynamic parameters to a url, see example below
+__text__ => The text to be display in the breadcrumbs.  return
+__url=''__ => The url to link to, not mandatory so no link will be created.  return
+__options={}__ => The same list of options that can be passed to a before_filter, [click here](http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000526) for more details.  return
+__&block__ => A block can be used to add dynamic parameters to a url, see example below for more details.  return
 	
 #### Dynamic urls	
 
