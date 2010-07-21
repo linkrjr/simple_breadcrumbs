@@ -33,20 +33,20 @@ The method "add" above will be available from the block parameter.
 
 Add method:	
 	
- :text => The text to be display in the breadcrumbs
- :url='' => The url to link to, not mandatory so no link will be created
- :options={} => The same list of options that can be passed to a before_filter, view http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000526 for more details
- :&block => A block can be used to add dynamic parameters to a url, see example below
+__text__ => The text to be display in the breadcrumbs
+__url=''__ => The url to link to, not mandatory so no link will be created
+__options={}__ => The same list of options that can be passed to a before_filter, [click here](http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000526) for more details
+__&block__ => A block can be used to add dynamic parameters to a url, see example below
 	
 #### Dynamic urls	
 
- breadcrumbs do |breadcrumb|
-   breadcrumb.add("Home","/") 
-   breadcrumb.add("First","/first")
-   breadcrumb.add("Second", :only => [:show, :new, :edit]) do 
-     {:method => "second_path", :parameters => ["params[:id]"]}
-   end
- end
+    breadcrumbs do |breadcrumb|
+      breadcrumb.add("Home","/") 
+      breadcrumb.add("First","/first")
+      breadcrumb.add("Second", :only => [:show, :new, :edit]) do 
+        {:method => "second_path", :parameters => ["params[:id]"]}
+      end
+    end
 
 Parameters can be passed to methods that will create the url string, 
 the parameters must be ordered following the sequence of parameters the method expects
@@ -65,17 +65,17 @@ There are 3 possible ways to render the breadcrumbs:
 
 The plugin will look for a layout called _breadcrumbs.html.erb in the layouts folder.
 
- <% render_breadcrumbs %>
+    <% render_breadcrumbs %>
 
 #### Passing a partial
 
 A partial can be create and passed in just like a normal render.
 
- <% render_breadcrumbs :partial => "breadcrumbs" %> - will look for the partial inside the processed view page folder
+    <% render_breadcrumbs :partial => "breadcrumbs" %> - *will look for the partial inside the processed view page folder*
 
 or
 
- <% render_breadcrumbs :partial => "layouts/breadcrumbs" %> - will look for the partial inside the layouts folder
+    <% render_breadcrumbs :partial => "layouts/breadcrumbs" %> - *will look for the partial inside the layouts folder*
 
 The partial filename follows the same rules for creating partials
 
@@ -83,17 +83,17 @@ The partial filename follows the same rules for creating partials
 
 A block containing the html to be rendered can be used
 
- <% breadcrumbs do %>
-	<% if @breadcrumbs %>
-	  <div id="breadcrumbs">
-	    <ul>
-	      <% @breadcrumbs.each do |txt, path| %>
-	        <li><%= link_to(txt, path) %></li>
-	      <% end  %>
-	    </ul>
-	  </div>
-	<% end -%>
- <% end %>	
+    <% breadcrumbs do %>
+	   <% if @breadcrumbs %>
+	     <div id="breadcrumbs">
+	       <ul>
+	         <% @breadcrumbs.each do |txt, path| %>
+	           <li><%= link_to(txt, path) %></li>
+	         <% end  %>
+	       </ul>
+	     </div>
+	   <% end -%>
+    <% end %>	
 
 #### Available variables
 
