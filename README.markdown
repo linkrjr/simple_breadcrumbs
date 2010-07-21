@@ -34,8 +34,11 @@ The method "add" above will be available from the block parameter.
 Add method:	
 	
 __text__ => The text to be display in the breadcrumbs
+
 __url=''__ => The url to link to, not mandatory so no link will be created
+
 __options={}__ => The same list of options that can be passed to a before_filter, [click here](http://api.rubyonrails.org/classes/ActionController/Filters/ClassMethods.html#M000526) for more details
+
 __&block__ => A block can be used to add dynamic parameters to a url, see example below
 	
 #### Dynamic urls	
