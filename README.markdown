@@ -1,15 +1,28 @@
-# Breadcrumbs
+# Simple Breadcrumbs
 
 
-This plugin is an attempt to implementation a simple to use breadcrumbs renderer.
-The code here was initially implemented as a core lib on a project a later turned into a plugin.
-
-The code was initially based on Przemysław Szeryf Kowalczyk sample code 
-posted on his blog (http://szeryf.wordpress.com/2008/06/13/easy-and-flexible-breadcrumbs-for-rails/) and then moved on and turned into this plugin.
+This plugin is an attempt to implementation a simple to use simple breadcrumbs renderer.
+The code here was initially implemented as a core lib of a project and later on turned into a gem.
 
 ## Install
 
-script/plugin install git://github.com/linkrjr/breadcrumbs
+gem install simple_breadcrumbs
+
+### Rails 3
+
+Include in your Gemfile
+
+gem 'simple_breadcrumbs'
+
+### Rails 2
+
+Include in your environment.rb
+
+config.gem 'simple_breadcrumbs'
+
+### As a plugin
+
+script/plugin install git://github.com/linkrjr/simple_breadcrumbs
 
 ## Usage
 
