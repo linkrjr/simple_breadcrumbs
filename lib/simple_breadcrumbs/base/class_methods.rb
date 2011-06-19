@@ -5,10 +5,12 @@ module SimpleBreadcrumbs
       def breadcrumbs
         yield self      
       end
-
+      
+      protected
+      
       def add text, url='', options = {}
         parameter_options = {}
-        %w(static_parameters parameters_from_params methods route_parameters).each do |el|
+        %w(static params methods route).each do |el|
           parameter_options[el.to_sym] = options.delete(el.to_sym)
         end
         

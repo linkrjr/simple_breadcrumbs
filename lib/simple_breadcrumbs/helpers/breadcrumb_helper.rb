@@ -6,8 +6,7 @@ module SimpleBreadcrumbs
 
       def render_breadcrumbs(options={}, &block)
         return render_block(&block) if block_given?
-        return render_partial(options[:partial]) unless options.empty? || !options.include?(:partial)
-        render_partial
+        render_partial(options[:partial])
       end
 
       private
